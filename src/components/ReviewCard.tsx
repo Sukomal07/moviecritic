@@ -8,7 +8,7 @@ interface Review {
     reviewer: string | null;
     rating: number;
     comment: string;
-    setRefresh: (value: boolean) => void;
+    setRefresh: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function ReviewCard({ id, comment, rating, reviewer, setRefresh }: Review) {
@@ -22,7 +22,7 @@ export default function ReviewCard({ id, comment, rating, reviewer, setRefresh }
 
             if (response.status === 200) {
                 const data = await response.json();
-                setRefresh(true)
+                setRefresh(prev => !prev);
                 toast.success(data?.message);
             }
         } catch (error) {

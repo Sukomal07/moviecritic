@@ -8,7 +8,7 @@ interface CardProps {
     movieName: string
     releaseDate: string
     rating: number | null
-    setRefresh: (value: boolean) => void
+    setRefresh: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function MovieCard({ id, movieName, releaseDate, rating, setRefresh }: CardProps) {
@@ -23,7 +23,7 @@ export default function MovieCard({ id, movieName, releaseDate, rating, setRefre
 
             if (response.status === 200) {
                 const data = await response.json();
-                setRefresh(true)
+                setRefresh(prev => !prev);
                 toast.success(data?.message);
             }
         } catch (error) {

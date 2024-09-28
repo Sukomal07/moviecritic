@@ -74,7 +74,7 @@ export default function Page() {
 
     return (
         <div className='h-screen w-screen flex justify-center items-center'>
-            <div className='w-[400px] px-8 py-10 border-2 border-gray-400 flex flex-col gap-6'>
+            <div className='w-[300px] md:w-[400px] px-8 py-10 border-2 border-gray-400 flex flex-col gap-6'>
                 <h1 className='text-2xl font-semibold'>Add new review</h1>
                 <select name="movie" id="movie" value={selectedMovie}
                     onChange={(e) => setSelectedMovie(e.target.value)} className="w-full h-full border-2 border-gray-400 px-2 py-2 rounded-md outline-none font-normal bg-transparent cursor-pointer">

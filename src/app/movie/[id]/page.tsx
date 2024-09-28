@@ -66,9 +66,6 @@ export default function Page() {
                         console.error('An unknown error occurred');
                     }
                 }
-                finally {
-                    setRefresh(false)
-                }
             };
 
             searchReviews();
