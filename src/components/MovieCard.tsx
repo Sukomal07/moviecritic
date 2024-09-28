@@ -23,7 +23,7 @@ export default function MovieCard({ id, movieName, releaseDate, rating, setRefre
 
             if (response.status === 200) {
                 const data = await response.json();
-                setRefresh(prev => !prev);
+                setRefresh((prev: boolean) => !prev);
                 toast.success(data?.message);
             }
         } catch (error) {
@@ -41,7 +41,7 @@ export default function MovieCard({ id, movieName, releaseDate, rating, setRefre
         return formattedRating.toString();
     }
     return (
-        <div className='bg-[#E0DFFC] w-full p-6 flex flex-col cursor-pointer'>
+        <div className='bg-[#E0DFFC] w-full h-full p-6 flex flex-col cursor-pointer'>
             <div className='flex flex-col gap-4'>
                 <h1 className='text-xl font-bold capitalize break-words'>{movieName}</h1>
                 <p className='italic capitalize break-words text-[#566172]'>Released: {releaseDate}</p>

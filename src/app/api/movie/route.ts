@@ -13,10 +13,6 @@ export async function GET() {
             include: { reviews: true },
         });
 
-        if (!movies.length) {
-            return NextResponse.json({ message: "No movies found" }, { status: 404 })
-        }
-
         const movieWithRatings = movies.map(movie => ({
             ...movie,
             averageRating:
