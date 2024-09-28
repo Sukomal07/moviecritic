@@ -42,11 +42,11 @@ export default function ReviewCard({ id, comment, rating, reviewer, setRefresh }
     return (
         <div className='w-full p-4 border-2 border-gray-400 flex flex-col gap-6'>
             <div className='flex justify-between items-center'>
-                <p className='text-xl font-medium'>{comment}</p>
+                <p className='text-xl font-medium break-words'>{comment}</p>
                 <p className='text-[#615CF2] text-2xl font-semibold'> {formatRating(rating)} / 10</p>
             </div>
             <div className='flex justify-between items-center'>
-                <h1 className='text-xl font-semibold text-slate-600'>By {reviewer ? reviewer : " Anonymous"}</h1>
+                <h1 className='text-xl font-semibold text-slate-600 break-words'>By {reviewer ? reviewer : " Anonymous"}</h1>
                 <div className='ml-auto flex gap-5 items-center'>
                     <button onClick={() => router.push(`/review/update/${id}`)}>
                         <FilePenLine className='h-5 w-5 font-semibold text-[#798897]' />

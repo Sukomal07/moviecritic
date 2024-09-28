@@ -43,8 +43,8 @@ export default function MovieCard({ id, movieName, releaseDate, rating, setRefre
     return (
         <div className='bg-[#E0DFFC] w-full p-6 flex flex-col cursor-pointer'>
             <div className='flex flex-col gap-4'>
-                <h1 className='text-xl font-bold capitalize'>{movieName}</h1>
-                <p className='italic capitalize text-[#566172]'>Released: {releaseDate}</p>
+                <h1 className='text-xl font-bold capitalize break-words'>{movieName}</h1>
+                <p className='italic capitalize break-words text-[#566172]'>Released: {releaseDate}</p>
                 <p className='font-bold capitalize'>Rating: {formatRating(rating)} / 10</p>
             </div>
             <div className='ml-auto flex gap-5 items-center'>
