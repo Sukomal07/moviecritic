@@ -63,7 +63,7 @@ export default function Home() {
           <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search for your favourite movie" className="w-full h-full border-none outline-none text-xl font-normal bg-transparent" />
         </div>
       </div>
-      <section className="px-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 pb-12">
+      <section className="px-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 md:pb-12 mb-16">
         {
           movies && movies.length > 0 ? (
             movies.map((movie: Movie) => (

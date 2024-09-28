@@ -88,7 +88,7 @@ export default function Page() {
                 <h1 className='text-3xl font-semibold capitalize'>{movie?.name}</h1>
                 <h1 className='text-4xl font-medium text-[#615CF2] pr-4'>{formatRating(movie?.averageRating)} /10</h1>
             </div>
-            <section className='px-8 mt-6 pb-12 flex flex-col gap-5'>
+            <section className='px-8 mt-6 pb-12 flex flex-col gap-5 mb-16'>
                 {
                     movie && movie.reviews.length > 0 ? (
                         movie.reviews.map((review: Review) => (
